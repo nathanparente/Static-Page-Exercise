@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('./button.css');
+
+/* ROOT */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: content-box;
+}
+:root {
+    /*TYPOGRAPHY ====================================================================================================*/
+    /*each 1rem equals 10px*/
+    font-size:62.5%;
+    font-family: 'Roboto', sans-serif;
+
+    /*COLORS ==========================================================================================================*/
+    --blue:#418df0;
+    --dark-blue:#1f519d;
+    --purple:#733781;
+    --green:#12d54d;
+    --dark-green:#207245;
+    --orange:#CB4A32;
+    --white:#fff;
+    --black:#000;
+    --gray:#8f9aaa;
+
+    /*COLOR-BACKGROUND ==========================================================================================================*/
+
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 90%);
+    font-size: 1.6rem;
+    background: var(--blue);
+}
+nav{
+
+}
+
+.headerButton{
+    margin-right:40px;
+}
+
+
+main.banner{
+    width: 100%;
+    height: calc(100% - 10%);
+    background-image: url(./images/laptop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+main .overlay{
+    display: flex;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+main .textArea{
+    display: flex;
+    color: var(--white);
+    line-height: 2.4rem;
+}
+main .textArea .button{
+    font-size: 1.4rem;
+    padding: 10px;
+    background-color: var(--blue);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.6rem;
+    width: 90%;
+    height: auto;
+    padding: 2rem;
+    margin: 0;
+}
+
+
+@media (max-width:768px){
+    /*COLOR-BACKGROUND ============================================================== */
+    .blue{
+        background-color: var(--blue);
+    }
+    .dark-blue{
+        background-color: var(--dark-blue);
+    }
+    .green{
+        background-color: var(--dark-green);
+    }
+    .orange{
+        background-color: var(--orange);
+    }
+    .purple{
+        background-color: var(--purple);
+    }
+    /*COLOR-TEXT ============================================================== */
+    .text-blue{
+        color: blue;
+    }
+    .text-dark-blue{
+        color: var(--dark-blue);
+    }
+    .text-green{
+        color: var(--green);
+    }
+    .text-orange{
+        color: var(--orange);
+    }
+    .text-purple{
+        color: var(--purple);
+    }
+    nav{
+        display:none;
+    }
+    .menuSection{
+        margin-left: 40px;
+    }
+    .menu-toggle{
+        width: 30px;
+        height: 25px;
+    }
+    .one, .two, .three {
+        background: var(--white);
+        height: 3px;
+        width: 100%;
+        margin: 6px auto;
+    }
+    main .overlay{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    main .textArea {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 120px;
+    }
+    main .textArea h1{
+        font-size: 3.2rem;
+        font-weight: 400;
+    }
+    main .textArea p{
+        width: 225px;
+        font-size: 1.4rem;
+        margin:20px 0 50px 0;
+    }
+    main .logo {
+        margin-bottom: 30px;
+    }
+    section{
+        flex-direction: column;
+    }
+    section p{
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: var(--gray);
+        margin-top: 2rem;
+    }
+    section h2{
+        font-size: 2.8rem;
+        color: var(--blue);
+        padding: 10px 0;
+    }
+    .cardArea{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: left;
+        height: auto;
+        padding: 20px 10px;
+        margin-bottom: 10px;
+    }
+    .cardArea img {
+        width: 70px;
+        height: 60px;
+        margin: 0 10px;
+    }
+    .cardText{
+        flex:1;
+        color:var(--white);
+    }
+    .cardTitle{
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+    .cardDescription{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1rem;
+    }
+    .infoText{
+        flex: 1;
+        color: var(--gray);
+    }
+    .infoTitle{
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+    .infoDescription{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        margin-right: 18px;
+    }
+    .infoArea{
+        border-bottom: 1px solid var(--gray);
+    }
+    .infoArea img {
+        width: 60px;
+        height: 60px;
+        margin: 0 10px;
+    }
+    
+
+}

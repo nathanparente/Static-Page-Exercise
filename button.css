@@ -1,0 +1,38 @@
+.buttonPurple{
+    font-size: 1.4rem;
+    padding: 10px;
+    background-color:var(--purple);
+    color: var(--white);
+}
+
+.buttonBlue{
+    font-size: 1.4rem;
+    padding: 10px;
+    background-color:var(--blue);
+    color: var(--white);
+}
+
+.buttonOutlineGreen{
+    max-width: fit-content;
+    font-size: 1.4rem;
+    padding: 10px;
+    margin-top: 12px;
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+.buttonOutlineBlue{
+    max-width: fit-content;
+    font-size: 1.4rem;
+    padding: 10px;
+    margin-top: 12px;
+    border: 1px solid var(--blue);
+    color: var(--green);
+}
+.buttonOutlineOrange{
+    max-width: fit-content;
+    font-size: 1.4rem;
+    padding: 10px;
+    margin-top: 12px;
+    border: 1px solid var(--orange);
+    color: var(--green);
+}
