@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('./button.css');
+@import url('./colors.css');
 
 /* ROOT */
 *{
@@ -12,7 +13,6 @@
     /*each 1rem equals 10px*/
     font-size:62.5%;
     font-family: 'Roboto', sans-serif;
-
     /*COLORS ==========================================================================================================*/
     --blue:#418df0;
     --dark-blue:#1f519d;
@@ -20,17 +20,24 @@
     --green:#12d54d;
     --dark-green:#207245;
     --orange:#CB4A32;
+    --yellow:#ffb900;
     --white:#fff;
     --black:#000;
     --gray:#8f9aaa;
-
-    /*COLOR-BACKGROUND ==========================================================================================================*/
-
-
+    --light-gray:#c2c8d2;
 }
 body{
     width: 100%;
     height: 100vh;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.6rem;
+    height: auto;
+    padding: 20px;
+    margin: 0;
 }
 header {
     display: flex;
@@ -41,15 +48,35 @@ header {
     font-size: 1.6rem;
     background: var(--blue);
 }
+.menuSection{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+}
 nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+nav ul {
+    display: flex;
+}
+nav a{
+    display: block;
+    text-align: center;
+    padding: 1.4rem 1.6rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--white);
 
 }
-
 .headerButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-right:40px;
 }
-
-
 main.banner{
     width: 100%;
     height: calc(100% - 10%);
@@ -60,70 +87,227 @@ main.banner{
 }
 main .overlay{
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
 }
-main .textArea{
+main .textArea {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    color: var(--white);
+    line-height: 2.4rem;
+    margin-left: 50px;
+    margin-top: 200px;
+}
+main .textArea h1{
+    font-size: 6rem;
+    font-weight: 400;
+}
+main .textArea p{
+    width: auto;
+    font-size: 2rem;
+    margin:40px 0 50px 0;
+}
+main .textArea .buttonBlue{
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: var(--blue);
+}
+main .banner-below{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 50px;
+}
+main .arrow{
+    width: 60px;
+    height: 60px;
+}
+main .logo {
+    width: 180px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+section{
+    flex-direction: column;
+}
+section p{
+    font-size: 1.6rem;
+    line-height: 3rem;
+    color: var(--gray);
+    margin-block: 5px;
+}
+section p strong{
+    color: var(--orange);
+}
+section h2{
+    font-size: 2.8rem;
+    color: var(--blue);
+    padding: 10px 0;
+    margin-block: 20px;
+}
+.cardsArea{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+    max-width: 400px;
+    height: auto;
+    padding: 20px 10px;
+    margin: 10px;
+}
+.Card img {
+    width: 70px;
+    height: 60px;
+    margin: 0 10px;
+}
+.cardText{
+    flex:1;
+    color:var(--white);
+}
+.cardTitle{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.cardDescription{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+.cardsArea.infoLinksArea{
+    flex-wrap: nowrap;
+}
+.Card .infoText, .Card .infoDescription{
+    text-align: center;
+}
+.Card .infoText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Card .infoTitle{
+    margin-block: 15px;
+    font-size: 1.4rem;
+}
+.Card .infoDescription{
+    font-size: 1rem;
+    color: var(--gray);
+}
+.Card.infoLinks{
+    justify-content: center;
+}
+.infoLinks img{
+    width: 90px;
+    height: 90px;
+}
+.informacoesArea{
+    display: flex;
+}
+.informacoesArea .Card {
+    margin: 0;
+    padding: 0;
+}
+.informacoesArea .infoText{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    border: 1.5px solid var(--gray);
+    margin-bottom: 0;
+}
+.informacoesArea .infoDescription{
+    padding: 10px 15px;
+}
+section.banner{
+    width: 100%;
+    height: calc(100% - 60%);
+    background-image: url(./images/team.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section .overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+section .textArea {
+    text-align: center;
     color: var(--white);
     line-height: 2.4rem;
 }
-main .textArea .button{
-    font-size: 1.4rem;
-    padding: 10px;
-    background-color: var(--blue);
+section .textArea h1{
+    font-size: 6rem;
+    font-weight: 400px;
 }
-
-section {
+section .textArea p{
+    width: 400px;
+    font-size: 2.2rem;
+    margin:40px 0 50px 0;
+}
+.formContainer{
     display: flex;
     justify-content: center;
-    text-align: center;
-    line-height: 1.6rem;
-    width: 90%;
-    height: auto;
-    padding: 2rem;
-    margin: 0;
+    width: 100%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin-inline: 10px;
+    padding: 20px;
+    width: 300px;
+}
+form fieldset {
+    display: flex;
+    width: 100%;
+    margin-block: 10px;
+    border: none;
+}
+form label{
+    flex:1;
+}
+form input[type="text"]{
+    width: 100%;
+    height: 25px;
+    border-radius: 2px;
+    outline: 0;
+    border: none;
+}
+form input:focus{
+    border: 2px solid var(--blue);
+}
+form button[type="submit"] {
+    width:100%;
+    border: none;
+}
+footer{
+    flex-direction: column;
+    color:var(--white);
+    font-size: 1rem;
 }
 
-
 @media (max-width:768px){
-    /*COLOR-BACKGROUND ============================================================== */
-    .blue{
-        background-color: var(--blue);
-    }
-    .dark-blue{
-        background-color: var(--dark-blue);
-    }
-    .green{
-        background-color: var(--dark-green);
-    }
-    .orange{
-        background-color: var(--orange);
-    }
-    .purple{
-        background-color: var(--purple);
-    }
-    /*COLOR-TEXT ============================================================== */
-    .text-blue{
-        color: blue;
-    }
-    .text-dark-blue{
-        color: var(--dark-blue);
-    }
-    .text-green{
-        color: var(--green);
-    }
-    .text-orange{
-        color: var(--orange);
-    }
-    .text-purple{
-        color: var(--purple);
-    }
     nav{
         display:none;
     }
     .menuSection{
         margin-left: 40px;
+        margin-bottom: 10px;
+    }
+    .menuSection .logo{
+        display: none;
     }
     .menu-toggle{
         width: 30px;
@@ -140,10 +324,16 @@ section {
         align-items: center;
         justify-content: space-between;
     }
-    main .textArea {
+    section .overlay{
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+    }
+    main .textArea {
+        display: flex;
+        align-items: center;
         text-align: center;
+        margin-left: 0;
         margin-top: 120px;
     }
     main .textArea h1{
@@ -155,6 +345,23 @@ section {
         font-size: 1.4rem;
         margin:20px 0 50px 0;
     }
+    section .textArea{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    section .textArea p {
+        width: 300px;
+        font-size: 1.4rem;
+        font-weight:400;
+    }
+    main .banner-below{
+        justify-content: center;
+        padding-inline: 0;
+    }
+    main .arrow{
+        display: none;
+    }
     main .logo {
         margin-bottom: 30px;
     }
@@ -162,17 +369,21 @@ section {
         flex-direction: column;
     }
     section p{
-        font-size: 1.4rem;
-        line-height: 2rem;
+        font-size: 1.2rem;
+        line-height: 3rem;
         color: var(--gray);
-        margin-top: 2rem;
+        margin-block: 5px;
     }
     section h2{
         font-size: 2.8rem;
         color: var(--blue);
         padding: 10px 0;
+        margin-block: 20px;
     }
-    .cardArea{
+    .cardsArea .Card:nth-child(n+6):nth-child(-n+10){
+        display: none;
+    }
+    .Card{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -180,11 +391,16 @@ section {
         height: auto;
         padding: 20px 10px;
         margin-bottom: 10px;
+        max-width: 100%;
     }
-    .cardArea img {
+    .Card img {
         width: 70px;
         height: 60px;
         margin: 0 10px;
+    }
+    .cardsArea.infoLinksArea{
+        flex-wrap: wrap;
+        text-align: left;
     }
     .cardText{
         flex:1;
@@ -199,6 +415,22 @@ section {
         display: flex;
         flex-wrap: wrap;
         font-size: 1rem;
+    }
+    .Card.infoLinks{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: left;
+        height: auto;
+        padding: 20px 10px;
+        margin-bottom: 10px;
+    }
+    .Card .infoText{
+        align-items: flex-start;
+    }
+    .Card .infoTitle, .Card .infoDescription{
+        text-align: left;
     }
     .infoText{
         flex: 1;
@@ -215,14 +447,27 @@ section {
         font-size: 1rem;
         margin-right: 18px;
     }
-    .infoArea{
+    .infoLinks{
         border-bottom: 1px solid var(--gray);
     }
-    .infoArea img {
+    .infoLinks img {
         width: 60px;
         height: 60px;
         margin: 0 10px;
     }
-    
-
+    .informacoesArea {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .informacoesArea .infoText{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 1.5px solid var(--gray);
+        margin-bottom: 0;
+    }
+    .informacoesArea .infoTitle, .informacoesArea .infoDescription{
+        text-align: center;
+    }
 }

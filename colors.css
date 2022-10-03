@@ -1,0 +1,44 @@
+/*COLOR-BACKGROUND ============================================================== */
+.blue{
+    background-color: var(--blue);
+}
+.dark-blue{
+    background-color: var(--dark-blue);
+}
+.green{
+    background-color: var(--dark-green);
+}
+.orange{
+    background-color: var(--orange);
+}
+.yellow{
+    background-color: var(--yellow);
+}
+.purple{
+    background-color: var(--purple);
+}
+.gray{
+    background-color: var(--gray);
+}
+.light-gray{
+    background-color: var(--light-gray);
+}
+/*COLOR-TEXT ============================================================== */
+.text-blue{
+    color: var(--blue);
+}
+.text-dark-blue{
+    color: var(--dark-blue);
+}
+.text-green{
+    color: var(--green);
+}
+.text-orange{
+    color: var(--orange);
+}
+.text-yellow{
+    color: var(--yellow);
+}
+.text-purple{
+    color: var(--purple);
+}
