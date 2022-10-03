@@ -14,9 +14,11 @@
     font-size:62.5%;
     font-family: 'Roboto', sans-serif;
     /*COLORS ==========================================================================================================*/
+    --light-blue:#75a1df;
     --blue:#418df0;
-    --dark-blue:#1f519d;
+    --dark-blue:#844093;
     --purple:#733781;
+    --purple-hover:#834691;
     --green:#12d54d;
     --dark-green:#207245;
     --orange:#CB4A32;
@@ -40,6 +42,9 @@ body{
     margin: 0;
 }
 header {
+    position: fixed;
+    top: 0;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +53,10 @@ header {
     font-size: 1.6rem;
     background: var(--blue);
 }
-.menuSection{
+#menuFixo{
+    
+}
+.menuToggle-Area{
     display: flex;
     justify-content: space-between;
     margin-left: 50px;
@@ -71,11 +79,27 @@ nav a{
     color: var(--white);
 
 }
-.headerButton{
+.menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-right:40px;
+}
+button{
+    display: inline-block;
+    outline: 0;
+    border: 0;
+}
+.menu button:hover{
+    background: var(--purple-hover);
+}
+button:active{
+  background: var(--purple-hover);
+  box-shadow: 0 2px var(--dark-blue);
+  transform: translateY(1px);
+}
+.menu a:hover{
+    background: var(--dark-blue);
 }
 main.banner{
     width: 100%;
@@ -115,6 +139,9 @@ main .textArea .buttonBlue{
     font-size: 2rem;
     padding: 10px 15px;
     background-color: var(--blue);
+}
+main .textArea .buttonBlue:hover{
+    background: var(--light-blue);
 }
 main .banner-below{
     display: flex;
@@ -292,6 +319,9 @@ form button[type="submit"] {
     width:100%;
     border: none;
 }
+form button:hover{
+    background: var(--light-blue);
+}
 footer{
     flex-direction: column;
     color:var(--white);
@@ -302,11 +332,11 @@ footer{
     nav{
         display:none;
     }
-    .menuSection{
+    .menuToggle-Area{
         margin-left: 40px;
         margin-bottom: 10px;
     }
-    .menuSection .logo{
+    .menuToggle-Area .logo{
         display: none;
     }
     .menu-toggle{
