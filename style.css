@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('./button.css');
 @import url('./colors.css');
+@import url('./card.css');
 
-/* ROOT */
+/* ROOT =========================================================================================================== */
 *{
     margin:0;
     padding:0;
@@ -16,7 +17,7 @@
     /*COLORS ==========================================================================================================*/
     --light-blue:#75a1df;
     --blue:#418df0;
-    --dark-blue:#844093;
+    --dark-blue:#2561af;
     --purple:#733781;
     --purple-hover:#834691;
     --green:#12d54d;
@@ -32,13 +33,14 @@ body{
     width: 100%;
     height: 100vh;
 }
+/* DESKTOP =========================================================================================================== */
 .container {
     display: flex;
     justify-content: center;
     text-align: center;
     line-height: 1.6rem;
     height: auto;
-    padding: 20px;
+    padding: 20px 60px;
     margin: 0;
 }
 header {
@@ -53,13 +55,10 @@ header {
     font-size: 1.6rem;
     background: var(--blue);
 }
-#menuFixo{
-    
-}
 .menuToggle-Area{
     display: flex;
     justify-content: space-between;
-    margin-left: 50px;
+    margin-left: 60px;
 }
 nav{
     display: flex;
@@ -77,13 +76,13 @@ nav a{
     text-decoration: none;
     font-size: 1.8rem;
     color: var(--white);
-
 }
 .menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right:40px;
+    margin-right:60px;
+    height: calc(100% - 90%);
 }
 button{
     display: inline-block;
@@ -174,62 +173,6 @@ section h2{
     color: var(--blue);
     padding: 10px 0;
     margin-block: 20px;
-}
-.cardsArea{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.Card{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: left;
-    max-width: 400px;
-    height: auto;
-    padding: 20px 10px;
-    margin: 10px;
-}
-.Card img {
-    width: 70px;
-    height: 60px;
-    margin: 0 10px;
-}
-.cardText{
-    flex:1;
-    color:var(--white);
-}
-.cardTitle{
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-bottom: 8px;
-}
-.cardDescription{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1rem;
-}
-.cardsArea.infoLinksArea{
-    flex-wrap: nowrap;
-}
-.Card .infoText, .Card .infoDescription{
-    text-align: center;
-}
-.Card .infoText{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.Card .infoTitle{
-    margin-block: 15px;
-    font-size: 1.4rem;
-}
-.Card .infoDescription{
-    font-size: 1rem;
-    color: var(--gray);
-}
-.Card.infoLinks{
-    justify-content: center;
 }
 .infoLinks img{
     width: 90px;
@@ -327,7 +270,7 @@ footer{
     color:var(--white);
     font-size: 1rem;
 }
-
+/*MOBILE ================================================================================================================ */
 @media (max-width:768px){
     nav{
         display:none;
