@@ -1,12 +1,33 @@
 /*COLOR-BACKGROUND ============================================================== */
 /*TODAS AS CORES SE ENCONTRAM NO root: NO ARQUIVO styl.css*/
+.light-blue{
+    background-color: var(--light-blue);
+}
 .blue{
     background-color: var(--blue);
+}
+.second-blue{
+    background-color: var(--second-blue);
+}
+.third-blue{
+    background-color: var(--third-blue);
+}
+.fourth-blue{
+    background-color: var(--fourth-blue);
+}
+.fifth-blue{
+    background-color: var(--fifth-blue);
+}
+.sixth-blue{
+    background-color: var(--sixth-blue);
 }
 .dark-blue{
     background-color: var(--dark-blue);
 }
 .green{
+    background-color: var(--dark-green);
+}
+.dark-green{
     background-color: var(--dark-green);
 }
 .orange{
@@ -18,6 +39,9 @@
 .purple{
     background-color: var(--purple);
 }
+.second-purple{
+    background-color: var(--second-purple);
+}
 .gray{
     background-color: var(--gray);
 }
@@ -25,14 +49,35 @@
     background-color: var(--light-gray);
 }
 /*COLOR-TEXT ============================================================== */
+.text-light-blue{
+    color: var(--light-blue);
+}
 .text-blue{
     color: var(--blue);
+}
+.text-second-blue{
+    color: var(--second-blue);
+}
+.text-third-blue{
+    color: var(--third-blue);
+}
+.text-fourth-blue{
+    color: var(--fourth-blue);
+}
+.text-fifth-blue{
+    color: var(--fifth-blue);
+}
+.text-sixth-blue{
+    color: var(--sixth-blue);
 }
 .text-dark-blue{
     color: var(--dark-blue);
 }
 .text-green{
     color: var(--green);
+}
+.text-dark-green{
+    color: var(--dark-green);
 }
 .text-orange{
     color: var(--orange);
@@ -42,4 +87,7 @@
 }
 .text-purple{
     color: var(--purple);
+}
+.text-second-purple{
+    color: var(--second-purple);
 }

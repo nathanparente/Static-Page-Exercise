@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('./button.css');
 @import url('./colors.css');
 @import url('./card.css');
@@ -7,160 +6,193 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 :root {
     /*TYPOGRAPHY ====================================================================================================*/
     /*each 1rem equals 10px*/
     font-size:62.5%;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /*COLORS ==========================================================================================================*/
-    --light-blue:#75a1df;
-    --blue:#418df0;
-    --dark-blue:#2561af;
+    --light-blue:#00A4EF;
+    --blue:#2571B7;
+    --second-blue:#00AFF0;
+    --third-blue:#0072C6;
+    --fourth-blue:#2C5898;
+    --fifth-blue:#094AB2;
+    --sixth-blue:#0093BE;
+    --dark-blue:#002050;
     --purple:#733781;
+    --second-purple:#5558AF;
     --purple-hover:#834691;
-    --green:#12d54d;
+    --green:#7FBA00;
     --dark-green:#207245;
     --orange:#CB4A32;
     --yellow:#ffb900;
     --white:#fff;
     --black:#000;
-    --gray:#8f9aaa;
-    --light-gray:#c2c8d2;
+    --gray:#737373;
+    --light-gray:#E6E6E6;
 }
 body{
     width: 100%;
     height: 100vh;
+
 }
 /* DESKTOP =========================================================================================================== */
-.container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.6rem;
-    height: auto;
-    padding: 20px 60px;
-    margin: 0;
-}
 header {
     position: fixed;
     top: 0;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     width: 100%;
-    height: calc(100% - 90%);
+    height: 80px;
+    padding: 20px 120px;
     font-size: 1.6rem;
     background: var(--blue);
 }
-.menuToggle-Area{
+header .menuArea{
     display: flex;
     justify-content: space-between;
-    margin-left: 60px;
-}
-nav{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin-right: 50px;
 }
-nav ul {
+header .menuToggleArea__logo{
+    display: block;
+    cursor: pointer;
+}
+header .menuDesktop{
     display: flex;
+    align-items: center;
 }
-nav a{
+header .menuDesktop__nav{
+    margin-inline: 50px;
+}
+header .menuDesktop__nav ul {
+    display: flex;
+    gap: 20px;
+}
+header .menuDesktop__nav a{
     display: block;
     text-align: center;
     padding: 1.4rem 1.6rem;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--white);
 }
-.menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right:60px;
-    height: calc(100% - 90%);
-}
-button{
+header .menuDesktop button{
     display: inline-block;
+    padding: 8px 22px;
     outline: 0;
     border: 0;
 }
-.menu button:hover{
-    background: var(--purple-hover);
+header .menuDesktop button:hover{
+    background: var(--fifth-blue);
 }
-button:active{
+header .menuDesktop button:active{
   background: var(--purple-hover);
   box-shadow: 0 2px var(--dark-blue);
   transform: translateY(1px);
 }
-.menu a:hover{
-    background: var(--dark-blue);
+header .menuDesktop a:hover{
+    color: var(--yellow);
+}
+main{
+    height: 140vh;
+    padding-top: 80px;
 }
 main.banner{
     width: 100%;
-    height: calc(100% - 10%);
-    background-image: url(./images/laptop.jpg);
+    height: 120vh;
+    background-image: url(./images/Grupo\ 52.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-main .overlay{
+main .banner__overlay{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    gap: 186.25px;
+    padding: 200px 548px 168px 120px;
+    height: auto;
+    background: rgba(0, 0, 0, 0);
 }
-main .textArea {
+main .banner__overlay__textArea {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     color: var(--white);
     line-height: 2.4rem;
-    margin-left: 50px;
-    margin-top: 200px;
+    gap: 24px;
 }
-main .textArea h1{
-    font-size: 6rem;
-    font-weight: 400;
+main .banner__overlay__textArea__title{
+    display: flex;
+    align-items: center;
+    width: 494px;
+    height: 106px;
+    text-align: left;
 }
-main .textArea p{
-    width: auto;
-    font-size: 2rem;
-    margin:40px 0 50px 0;
+main .banner__overlay__textArea__title h1{
+    font-size: 8rem;
+    font-weight: 600;
 }
-main .textArea .buttonBlue{
-    font-size: 2rem;
-    padding: 10px 15px;
+main .banner__overlay__textArea__subtitle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 772px;
+    height: 43px;
+    text-align: left;
+    margin-top:24px;
+}
+main .banner__overlay__textArea__subtitle p{
+    font-size: 3rem;
+}
+main .banner__overlay__textArea__buttonArea{
+    width: 266px;
+    height: 67px;
+    margin-top: 96px;
+}
+main .banner__overlay__textArea__buttonArea button{
+    display: inline-block;
+    width: 266px;
+    height: 67px;
+    outline: 0;
+    border: 0;
+}
+main .banner__overlay__textArea__buttonArea .buttonBlue{
+    font-size: 2.8rem;
+    padding: 15px 61px 15px 40px;
     background-color: var(--blue);
 }
-main .textArea .buttonBlue:hover{
+main .banner__overlay__textArea__buttonArea .buttonBlue:hover{
     background: var(--light-blue);
 }
-main .banner-below{
+main .banner__underArea{
+    display: flex;
+    margin-top: 100px;
+}
+main .banner__underArea__bannerBelow{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-inline: 50px;
+    padding-inline: 120px;
+    align-items: center;
 }
-main .arrow{
-    width: 60px;
-    height: 60px;
-}
-main .logo {
+main .banner__underArea__bannerBelow .logo {
     width: 180px;
     height: 60px;
-    margin-bottom: 30px;
 }
-section{
+
+section.container{
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 96px 120px 0 120px;
+    width: 100%;
 }
 section p{
-    font-size: 1.6rem;
+    text-align: center;
+    font-size: 1.8rem;
     line-height: 3rem;
     color: var(--gray);
     margin-block: 5px;
@@ -169,36 +201,38 @@ section p strong{
     color: var(--orange);
 }
 section h2{
-    font-size: 2.8rem;
+    font-size: 4rem;
     color: var(--blue);
     padding: 10px 0;
     margin-block: 20px;
 }
-.infoLinks img{
-    width: 90px;
-    height: 90px;
+.cardsContainer__card img{
+    width: 160px;
+    height: 160px;
+    margin: 0 10px;
+
 }
 .informacoesArea{
     display: flex;
 }
-.informacoesArea .Card {
+.informacoesArea .cardsContainer__card{
     margin: 0;
     padding: 0;
 }
-.informacoesArea .infoText{
+.informacoesArea .cardsContainer__card__infoText{
     display: flex;
     text-align: center;
     flex-wrap: wrap;
     border: 1.5px solid var(--gray);
     margin-bottom: 0;
 }
-.informacoesArea .infoDescription{
+.informacoesArea .cardsContainer__card__infoText__description{
     padding: 10px 15px;
 }
 section.banner{
     width: 100%;
     height: calc(100% - 60%);
-    background-image: url(./images/team.jpg);
+    background-image: url(./images/team.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -209,7 +243,7 @@ section .overlay{
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0);
 }
 section .textArea {
     text-align: center;
@@ -218,7 +252,7 @@ section .textArea {
 }
 section .textArea h1{
     font-size: 6rem;
-    font-weight: 400px;
+    font-weight: 600px;
 }
 section .textArea p{
     width: 400px;
@@ -270,21 +304,109 @@ footer{
     color:var(--white);
     font-size: 1rem;
 }
+footer .logoFooter img{
+    display: inline-block;
+    margin-inline: 20px;
+}
+@media (max-width:1440px){
+    main .banner__overlay{
+        display: flex;
+        flex-direction: column;
+        gap: 186.25px;
+        padding: 100px 224px 84px 120px;
+        height: auto;
+        background: rgba(0, 0, 0, 0);
+    }
+    main .banner__overlay__textArea {
+        gap: 0;
+    }
+    main .banner__overlay__textArea__title h1{
+        font-size: 8rem;
+        font-weight: 600;
+    }
+    main .banner__overlay__textArea__subtitle p{
+        font-size: 2.5rem;
+    }
+    main .banner__overlay__textArea__subtitle{
+        margin-top:0;
+    }
+    main .banner__overlay__textArea__buttonArea{
+        margin-top: 40px;
+    }
+    main .banner__underArea{
+        display: flex;
+        margin-top: 100px;
+    }
+    
+}
+@media (max-width:1024px){
+    section.container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 33px 18px;
+        width: 100%;
+    }
+    section h2{
+        font-size: 2.8rem;
+        color: var(--blue);
+        padding: 10px 0;
+        margin-block: 20px;
+    }
+    .cardsContainer__card.infoLinks{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: left;
+        height: auto;
+        padding: 20px 10px;
+        margin-bottom: 10px;
+    }
+    .cardsContainer__card.infoLinks img {
+        width: 160px;
+        height: 160px;
+        margin: 0 10px;
+    }
+}
 /*MOBILE ================================================================================================================ */
 @media (max-width:768px){
+    header {
+        position: fixed;
+        top: 0;
+    
+        width: 100%;
+        height: 48px;
+        padding: 10px 18px;
+        font-size: 1.4rem;
+        background: var(--blue);
+    }
+    header .menuToggleArea__logo{
+        display: none;
+    }
     nav{
         display:none;
     }
-    .menuToggle-Area{
-        margin-left: 40px;
+    header .menuDesktop button{
+        display: inline-block;
+        padding: 4px 11px;
+        width: 113px;
+        height: 28px;
+        font-size: 1.4rem;
+        outline: 0;
+        border: 0;
+    }
+    .menuToggleArea__menuToggle{
+        margin-left: 10px;
         margin-bottom: 10px;
     }
-    .menuToggle-Area .logo{
+    .menuToggleArea__menuToggle .logo{
         display: none;
     }
-    .menu-toggle{
-        width: 30px;
-        height: 25px;
+    .menuToggleArea__menuToggle{
+        width: 24px;
+        height: 18px;
     }
     .one, .two, .three {
         background: var(--white);
@@ -292,33 +414,49 @@ footer{
         width: 100%;
         margin: 6px auto;
     }
-    main .overlay{
+    main{
+        height: 140vh;
+        padding-top: 48px;
+    }
+    main .banner__overlay{
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        padding: 0;
+        gap: 0;
     }
-    section .overlay{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    main .textArea {
+    main .banner__overlay__textArea {
         display: flex;
+        flex-direction: column;
         align-items: center;
         text-align: center;
         margin-left: 0;
         margin-top: 120px;
     }
-    main .textArea h1{
-        font-size: 3.2rem;
-        font-weight: 400;
+    main .banner__overlay__textArea__title{
+        width: 248px;
+        height: 56px;
+    }   
+    main .banner__overlay__textArea__title h1{
+        font-size: 4.2rem;
+        font-weight: 600;
     }
-    main .textArea p{
-        width: 225px;
-        font-size: 1.4rem;
-        margin:20px 0 50px 0;
+    main .banner__overlay__textArea__subtitle{
+        width: 320px;
+        height: 68px;
+        text-align: center;
+        line-height: 40px;
+        margin-top:24px;
     }
-    section .textArea{
+    main .banner__overlay__textArea__subtitle p{
+        font-size: 2.4rem;
+    }
+    main .banner__overlay__textArea__buttonArea .buttonBlue{
+        font-size: 2.8rem;
+        padding: 12px 32px;
+        background-color: var(--blue);
+    }
+    section .banner__overlay__textArea{
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -332,20 +470,32 @@ footer{
         justify-content: center;
         padding-inline: 0;
     }
-    main .arrow{
+    main .banner__underArea__bannerBelow{
+        justify-content: center;
+    }
+    main .banner__underArea__bannerBelow .arrow{
         display: none;
     }
-    main .logo {
-        margin-bottom: 30px;
+    main .banner__underArea__bannerBelow .logo {
+        width: 180px;
+        height: 60px;
     }
-    section{
+    section.container{
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 33px 18px;
+        width: 100%;
     }
     section p{
-        font-size: 1.2rem;
-        line-height: 3rem;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
         color: var(--gray);
         margin-block: 5px;
+    }
+    section p strong{
+        color: var(--orange);
     }
     section h2{
         font-size: 2.8rem;
@@ -353,10 +503,10 @@ footer{
         padding: 10px 0;
         margin-block: 20px;
     }
-    .cardsArea .Card:nth-child(n+6):nth-child(-n+10){
+    .cardsContainer .cardsContainer__card:nth-child(n+6):nth-child(-n+10){
         display: none;
     }
-    .Card{
+    .cardsContainer__card{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -366,30 +516,31 @@ footer{
         margin-bottom: 10px;
         max-width: 100%;
     }
-    .Card img {
+    .cardsContainer__card.infoLinks img {
         width: 70px;
-        height: 60px;
+        height: 70px;
         margin: 0 10px;
     }
-    .cardsArea.infoLinksArea{
+    .cardsContainer.infoLinksArea{
         flex-wrap: wrap;
         text-align: left;
     }
-    .cardText{
+    .cardsContainer__card__cardText{
         flex:1;
         color:var(--white);
     }
-    .cardTitle{
+    .cardsContainer__card__cardText__title{
         font-size: 1.6rem;
         font-weight: 400;
         margin-bottom: 8px;
     }
-    .cardDescription{
+    .cardsContainer__card__cardText__description{
         display: flex;
         flex-wrap: wrap;
         font-size: 1rem;
     }
-    .Card.infoLinks{
+    .cardsContainer__card.infoLinks{
+        width: 100%;
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
@@ -399,48 +550,48 @@ footer{
         padding: 20px 10px;
         margin-bottom: 10px;
     }
-    .Card .infoText{
+    .cardsContainer__card .cardsContainer__card__infoText{
         align-items: flex-start;
     }
-    .Card .infoTitle, .Card .infoDescription{
+    .cardsContainer__card .cardsContainer__card__infoText__title, .cardsContainer__card .cardsContainer__card__infoText__description{
         text-align: left;
     }
-    .infoText{
+    .cardsContainer__card__infoText{
         flex: 1;
         color: var(--gray);
     }
-    .infoTitle{
+    .cardsContainer__card__infoText__title{
         font-size: 1.6rem;
         font-weight: 400;
         margin-bottom: 8px;
     }
-    .infoDescription{
+    .cardsContainer__card__infoText__description{
         display: flex;
         flex-wrap: wrap;
         font-size: 1rem;
         margin-right: 18px;
     }
-    .infoLinks{
+    .cardsContainer__card .infoLinks{
         border-bottom: 1px solid var(--gray);
     }
-    .infoLinks img {
+    .cardsContainer__card .infoLinks img {
         width: 60px;
         height: 60px;
         margin: 0 10px;
     }
-    .informacoesArea {
+    .cardsContainer__card .informacoesArea {
         display: flex;
         text-align: center;
         flex-wrap: wrap;
     }
-    .informacoesArea .infoText{
+    .cardsContainer__card .informacoesArea .cardsContainer__card__infoText{
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         border: 1.5px solid var(--gray);
         margin-bottom: 0;
     }
-    .informacoesArea .infoTitle, .informacoesArea .infoDescription{
+    .cardsContainer__card .informacoesArea .cardsContainer__card__infoText__title, .informacoesArea .cardsContainer__card__infoText__description{
         text-align: center;
     }
 }

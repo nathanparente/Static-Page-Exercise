@@ -1,14 +1,14 @@
-.buttonPurple{
-    font-size: 1.4rem;
+.buttonDarkBlue{
+    font-size: 1.6rem;
     padding: 10px;
-    background-color:var(--purple);
+    background-color:var(--dark-blue);
     color: var(--white);
 }
 
 .buttonBlue{
     font-size: 1.4rem;
     padding: 10px;
-    background-color:var(--blue);
+    background-color:var(--light-blue);
     color: var(--white);
 }
 
@@ -17,7 +17,7 @@
     font-size: 1.4rem;
     padding: 10px;
     margin-top: 12px;
-    border: 1px solid var(--green);
+    border: 2px solid var(--green);
     color: var(--green);
 }
 .buttonOutlineBlue{
@@ -25,7 +25,7 @@
     font-size: 1.4rem;
     padding: 10px;
     margin-top: 12px;
-    border: 1px solid var(--blue);
+    border: 2px solid var(--blue);
     color: var(--green);
 }
 .buttonOutlineOrange{
@@ -33,7 +33,7 @@
     font-size: 1.4rem;
     padding: 10px;
     margin-top: 12px;
-    border: 1px solid var(--orange);
+    border: 2px solid var(--orange);
     color: var(--green);
 }
 
@@ -42,6 +42,6 @@
     font-size: 1.4rem;
     padding: 10px;
     margin-top: 12px;
-    border: 1px solid var(--yellow);
+    border: 2px solid var(--yellow);
     color: var(--green);
 }
