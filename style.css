@@ -30,6 +30,7 @@
     --orange:#CB4A32;
     --yellow:#ffb900;
     --white:#fff;
+    --second-white: #DEDEDE;
     --black:#000;
     --gray:#737373;
     --light-gray:#E6E6E6;
@@ -98,14 +99,19 @@ header .menuDesktop a:hover{
 main{
     height: 140vh;
     padding-top: 80px;
+    
 }
 main.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 120vh;
     background-image: url(./images/Grupo\ 52.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 310px;
 }
 main .banner__overlay{
     display: flex;
@@ -113,6 +119,7 @@ main .banner__overlay{
     gap: 186.25px;
     padding: 200px 548px 168px 120px;
     height: auto;
+    min-height: 310px;
     background: rgba(0, 0, 0, 0);
 }
 main .banner__overlay__textArea {
@@ -169,13 +176,13 @@ main .banner__overlay__textArea__buttonArea .buttonBlue:hover{
 }
 main .banner__underArea{
     display: flex;
-    margin-top: 100px;
 }
 main .banner__underArea__bannerBelow{
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding-inline: 120px;
+    padding-bottom: 30px;
     align-items: center;
 }
 main .banner__underArea__bannerBelow .logo {
@@ -197,7 +204,8 @@ section p{
     color: var(--gray);
     margin-block: 5px;
 }
-section p strong{
+section p span{
+    font-weight: 700;
     color: var(--orange);
 }
 section h2{
@@ -206,11 +214,18 @@ section h2{
     padding: 10px 0;
     margin-block: 20px;
 }
-.cardsContainer__card img{
+.cardsContainer__card.infoLinks{
+    width: 336px;
+}
+#targetCards .cardsContainer__card img{
+    width: 64px;
+    height: 64px;
+    margin: 0 10px;
+}
+#infoCards .cardsContainer__card img{
     width: 160px;
     height: 160px;
     margin: 0 10px;
-
 }
 .informacoesArea{
     display: flex;
@@ -223,7 +238,7 @@ section h2{
     display: flex;
     text-align: center;
     flex-wrap: wrap;
-    border: 1.5px solid var(--gray);
+    border: 2.5px solid var(--second-white);
     margin-bottom: 0;
 }
 .informacoesArea .cardsContainer__card__infoText__description{
@@ -237,31 +252,32 @@ section.banner{
     background-position: center;
     background-repeat: no-repeat;
 }
-section .overlay{
+section .banner__overlay{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: rgba(0, 0, 0, 0);
+    margin-top: 96px;
 }
-section .textArea {
+section .banner__overlay__textArea {
     text-align: center;
-    color: var(--white);
-    line-height: 2.4rem;
 }
-section .textArea h1{
-    font-size: 6rem;
-    font-weight: 600px;
-}
-section .textArea p{
-    width: 400px;
-    font-size: 2.2rem;
+section .banner__overlay__textArea p{
+    max-width: 1200px;
+    font-size: 4.8rem;
     margin:40px 0 50px 0;
+    color: var(--white);
+    line-height: 6rem;
+}
+section .formContainer__desc p{
+    max-width: 1200px;
+    font-size: 2.4rem;
 }
 .formContainer{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 form{
@@ -269,9 +285,9 @@ form{
     flex-direction: column;
     align-items: center;
     text-align: left;
-    margin-inline: 10px;
-    padding: 20px;
-    width: 300px;
+    padding: 48px;
+    width: 564px;
+    height: 722px;
 }
 form fieldset {
     display: flex;
@@ -282,29 +298,47 @@ form fieldset {
 form label{
     flex:1;
 }
+form legend{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
 form input[type="text"]{
-    width: 100%;
-    height: 25px;
+    width: 468px;
+    height: 56px;
     border-radius: 2px;
     outline: 0;
     border: none;
+    padding-left: 20px;
+    font-size: 2.7rem;
+    color: var(--gray);
 }
 form input:focus{
     border: 2px solid var(--blue);
 }
 form button[type="submit"] {
     width:100%;
+    height: 67px;
+    font-size: 2.8rem;
     border: none;
 }
 form button:hover{
     background: var(--light-blue);
 }
+footer.container{
+    display: flex;
+    align-items: center;
+}
 footer{
     flex-direction: column;
-    color:var(--white);
-    font-size: 1rem;
+    color:var(--gray);
+    font-size: 1.4rem;
+}
+footer .footer__text{
+    margin-block: 20px;
 }
 footer .logoFooter img{
+    width: 175px;
+    height: 40px;
     display: inline-block;
     margin-inline: 20px;
 }
@@ -313,7 +347,7 @@ footer .logoFooter img{
         display: flex;
         flex-direction: column;
         gap: 186.25px;
-        padding: 100px 224px 84px 120px;
+        padding: 190px 224px 84px 120px;
         height: auto;
         background: rgba(0, 0, 0, 0);
     }
@@ -328,18 +362,44 @@ footer .logoFooter img{
         font-size: 2.5rem;
     }
     main .banner__overlay__textArea__subtitle{
-        margin-top:0;
+        margin-top:20px;
     }
     main .banner__overlay__textArea__buttonArea{
-        margin-top: 40px;
+        margin-top: 65px;
     }
     main .banner__underArea{
         display: flex;
-        margin-top: 100px;
+        
+    }
+    .cardsContainer__card.infoLinks{
+        width: 100%;
+    }
+    section .banner__overlay__textArea p{
+        font-size: 3.5rem;
     }
     
 }
 @media (max-width:1024px){
+    header{
+        padding: 20px 18px;
+    }
+    header .menuDesktop__nav a{
+        padding: 1.4rem 0;
+    }
+
+    main .banner__overlay{
+        padding: 190px 26px 65px 18px;
+    }
+
+    main .banner__overlay__textArea__subtitle{
+        width: 100%;
+    }
+    main .banner__underArea{
+        margin-top: 0;
+    }
+    main .banner__underArea__bannerBelow{
+        padding-inline:18px;
+    }
     section.container{
         display: flex;
         flex-direction: column;
@@ -368,6 +428,15 @@ footer .logoFooter img{
         width: 160px;
         height: 160px;
         margin: 0 10px;
+    }
+    section .banner__overlay__textArea p{
+        padding-inline: 18px;
+        font-size: 3.5rem;
+    }
+    .informacoesArea{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 /*MOBILE ================================================================================================================ */
@@ -399,7 +468,7 @@ footer .logoFooter img{
     }
     .menuToggleArea__menuToggle{
         margin-left: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 4px;
     }
     .menuToggleArea__menuToggle .logo{
         display: none;
@@ -410,7 +479,7 @@ footer .logoFooter img{
     }
     .one, .two, .three {
         background: var(--white);
-        height: 3px;
+        height: 2px;
         width: 100%;
         margin: 6px auto;
     }
@@ -452,7 +521,9 @@ footer .logoFooter img{
         font-size: 2.4rem;
     }
     main .banner__overlay__textArea__buttonArea .buttonBlue{
-        font-size: 2.8rem;
+        width: 188px;
+        height: 52px;
+        font-size: 2.1rem;
         padding: 12px 32px;
         background-color: var(--blue);
     }
@@ -472,6 +543,7 @@ footer .logoFooter img{
     }
     main .banner__underArea__bannerBelow{
         justify-content: center;
+        margin-top: 80px;
     }
     main .banner__underArea__bannerBelow .arrow{
         display: none;
@@ -484,21 +556,23 @@ footer .logoFooter img{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 33px 18px;
+        padding: 33px 18px 0 18px;
         width: 100%;
     }
     section p{
         text-align: center;
         font-size: 1.4rem;
-        line-height: 2.8rem;
+        line-height: 2.4rem;
         color: var(--gray);
         margin-block: 5px;
     }
-    section p strong{
-        color: var(--orange);
+    section p span{
+        font-weight: 400;
+        color: var(--gray);
     }
     section h2{
-        font-size: 2.8rem;
+        font-size: 2.4rem;
+        font-weight: 600;
         color: var(--blue);
         padding: 10px 0;
         margin-block: 20px;
@@ -516,7 +590,11 @@ footer .logoFooter img{
         margin-bottom: 10px;
         max-width: 100%;
     }
-    .cardsContainer__card.infoLinks img {
+    .cardsContainer__card img{
+        width: 50px;
+        height: 50px;
+    }
+    #infoCards .cardsContainer__card img {
         width: 70px;
         height: 70px;
         margin: 0 10px;
@@ -537,21 +615,12 @@ footer .logoFooter img{
     .cardsContainer__card__cardText__description{
         display: flex;
         flex-wrap: wrap;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
-    .cardsContainer__card.infoLinks{
-        width: 100%;
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        align-items: center;
-        text-align: left;
-        height: auto;
-        padding: 20px 10px;
-        margin-bottom: 10px;
-    }
+
     .cardsContainer__card .cardsContainer__card__infoText{
         align-items: flex-start;
+        width: 276px;
     }
     .cardsContainer__card .cardsContainer__card__infoText__title, .cardsContainer__card .cardsContainer__card__infoText__description{
         text-align: left;
@@ -565,10 +634,10 @@ footer .logoFooter img{
         font-weight: 400;
         margin-bottom: 8px;
     }
-    .cardsContainer__card__infoText__description{
+    .cardsContainer__card .cardsContainer__card__infoText__description{
         display: flex;
         flex-wrap: wrap;
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-right: 18px;
     }
     .cardsContainer__card .infoLinks{
@@ -578,6 +647,26 @@ footer .logoFooter img{
         width: 60px;
         height: 60px;
         margin: 0 10px;
+    }
+    .informacoesArea{
+        display: flex;
+        flex-direction: column;
+    }
+    .informacoesArea .cardsContainer__card__infoText{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        border: 2.5px solid var(--second-white);
+        margin-bottom: 0;
+    }
+    .informacoesArea .cardsContainer__card__infoText__title{
+        font-size: 1.5rem;
+    }
+    .informacoesArea .cardsContainer__card__infoText__description{
+        padding: 10px 24px 30px 24px;
+        margin: 0;
+        font-size: 1.2rem;
     }
     .cardsContainer__card .informacoesArea {
         display: flex;
@@ -593,5 +682,75 @@ footer .logoFooter img{
     }
     .cardsContainer__card .informacoesArea .cardsContainer__card__infoText__title, .informacoesArea .cardsContainer__card__infoText__description{
         text-align: center;
+    }
+    section.banner{
+        width: 100%;
+        height: calc(100% - 60%);
+        background-image: url(./images/teamBigSize.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    section .banner__overlay{
+        margin-top: 30px;
+    }
+    section .banner__overlay__textArea{
+        padding:42px 18px ;
+    }
+    section .banner__overlay__textArea p{
+        font-size: 2.4rem;
+        line-height: 30px;
+        margin: 0;
+    }
+    section .formContainer__desc p{
+        max-width: 320px;
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding: 18px;
+        width: 100%;
+        height: 532px;
+    }
+    form legend{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    form input[type="text"]{
+        width: 100%;
+        height: 40px;
+        padding-left: 20px;
+        font-size: 1.5rem;
+    }
+    form button[type="submit"] {
+        width:100%;
+        height: 52px;
+        font-size: 2rem;
+    }
+    footer.container{
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+    }
+    footer{
+        flex-direction: column;
+        color:var(--gray);
+        font-size: 1.4rem;
+    }
+    footer .logoFooter{
+        display: flex;
+        gap: 20px;
+    }
+    footer .footer__text{
+        margin-block: 20px;
+    }
+    footer .logoFooter img{
+        width: 128px;
+        display: inline-block;
+        margin-inline: 0;
     }
 }

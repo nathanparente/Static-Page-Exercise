@@ -45,6 +45,7 @@
 .cardsContainer__card .cardsContainer__card__infoText__title{
     margin-block: 15px;
     font-size: 2rem;
+    font-weight: 600;
 }
 .cardsContainer__card .cardsContainer__card__infoText__description{
     display:flex;
