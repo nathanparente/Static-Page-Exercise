@@ -327,6 +327,7 @@ form button:hover{
 footer.container{
     display: flex;
     align-items: center;
+    margin-top: 99px;
 }
 footer{
     flex-direction: column;
